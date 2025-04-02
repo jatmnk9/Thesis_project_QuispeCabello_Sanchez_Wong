@@ -121,7 +121,6 @@ def get_google_maps_reviews(place_url):
                     "country": "Perú",
                     "city": "Lima",
                     "address": address_text,
-                    "author": author,
                     "review": review_text,
                     "rating": rating,
                     "review_date": review_date
@@ -164,13 +163,10 @@ if __name__ == "__main__":
             "https://www.google.com/maps/search/Ministerio+de+la+Mujer+y+Poblaciones+Vulnerables"
         ],
         "cines": [
-            "https://www.google.com/maps/search/Cineplanet+Centro+Cívico",
-            "https://www.google.com/maps/search/Cineplanet+Plaza+San+Miguel",
             "https://www.google.com/maps/search/Cineplanet+Brasil",
             "https://www.google.com/maps/search/Cineplanet+Salaverry",
             "https://www.google.com/maps/search/Cinestar+UNI",
             "https://www.google.com/maps/search/CineStar+Benavides",
-            "https://www.google.com/maps/search/CINESTAR+SAN+JUAN",
             "https://www.google.com/maps/search/UVK+Platino+Panorama",
             "https://www.google.com/maps/search/UVK+Multicines+El+Agustino"
         ]
