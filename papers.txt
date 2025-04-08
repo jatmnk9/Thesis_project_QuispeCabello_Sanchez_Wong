@@ -1,0 +1,48 @@
+analisis de sentimiento seguros de salud
+29,000 -> [PDF] Análisis de Sentimientos desde la influencia de Twitter en los procesos de pólizas de seguros del ámbito colombiano
+
+health insurance sentiment analysis
+362,000 -> 
+[HTML] Using social media to identify consumers' sentiments towards attributes of health insurance during enrollment season
+[HTML] Application of SVM and Chi-Square Feature Selection for Sentiment Analysis of Indonesia's National Health Insurance Mobile Application
+
+lexicon health insurance
+sentiment analysis call center
+1,090,000 ->
+[PDF] Sentiment analysis of call centre audio conversations using text classification
+Original Research Article Sentiment analysis for Arabic call center notes using machine learning techniques
+Call Center Customer Sentiment Analysis Using ML and NLP
+Sentiment analysis: Measuring sentiment strength of call centre conversations
+A deep learning system for sentiment analysis of service calls
+[LIBRO] Acoustic feature-based sentiment analysis of call center data
+
+lexicón development sentiment analysis
+18,000
+[PDF] SentiSense: An easily scalable concept-based affective lexicon for sentiment analysis.
+[PDF] Diseño y desarrollo de un lexicón de polaridad para el análisis del sentimiento
+
+lexicon especializado
+22,300 ->
+FSAL: Lexicón financiero de sentimiento en español rioplatense diseñado para “Bolsas y Mercados Argentinos”(BYMA)
+
+how to create a lexicon 
+1,230,000
+[PDF] Emotions evoked by common words and phrases: Using mechanical turk to create an emotion lexicon
+
+how to create a lexical analysis sentiment
+Desde 2021
+17,300 ->
+A survey on sentiment analysis methods, applications, and challenges
+Lexicon-based vs. Bert-based sentiment analysis: A comparative study in Italian
+
+
+analisis de sentimiento de quejas
+15,700
+Desde 2021:
+Procesador de comentarios laborales que detecta mobbing mediante análisis sentimental
+Procedimiento para conocer las causas del alto número de quejas no resueltas en la Empresa Eléctrica de Matanzas.
+Minería de opiniones en un modelo de educación remota de emergencia en el Ecuador: Opinion mining in a model of remote emergency education model in Ecuador
+
+analisis de sentimiento especializado industria
+16,300 ->
+[PDF] Análisis de sentimientos en el Corpus SENTCOVID en español: modelos y técnicas de procesamiento de lenguaje natural, Machine Learning y Deep Learning
