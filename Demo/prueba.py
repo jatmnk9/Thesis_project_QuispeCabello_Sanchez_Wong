@@ -60,9 +60,6 @@ def get_google_maps_reviews(place_url):
         place_name_element = driver.find_element(By.CLASS_NAME, "DUwDvf")
         place_name_text = place_name_element.text.strip()
 
-        address_element = driver.find_element(By.CLASS_NAME, "Io6YTe")
-        address_text = address_element.text.strip()
-
         try:
             reviews_tab = WebDriverWait(driver, 15).until(
                 EC.element_to_be_clickable((By.XPATH, "//div[contains(text(), 'Opiniones')]"))
@@ -104,25 +101,17 @@ def get_google_maps_reviews(place_url):
         reviews_data = []
         for review_element in reviews_elements:
             try:
-                author_element = review_element.find("div", class_="d4r55")
-                author = author_element.text.strip() if author_element else "N/A"
+                
 
                 review_text_element = review_element.find("span", class_="wiI7pd")
                 review_text = review_text_element.text.strip() if review_text_element else "N/A"
 
-                raw_rating = review_element.find("span", class_="kvMYJc")["aria-label"]
-                rating = float(re.search(r"(\d+)", raw_rating).group(1))
-
+            
                 review_date_element = review_element.find("span", class_="rsqaWe")
                 review_date = convertir_fecha(review_date_element.text.strip()) if review_date_element else "N/A"
 
                 reviews_data.append({
-                    "place": place_name_text,
-                    "country": "Perú",
-                    "city": "Lima",
-                    "address": address_text,
                     "review": review_text,
-                    "rating": rating,
                     "review_date": review_date
                 })
             except Exception as e:
@@ -150,25 +139,9 @@ def scrape_reviews(category, urls):
 
 if __name__ == "__main__":
     categories = {
-        "comisarias": [
-            "https://www.google.com/maps/search/Comisaria+Mirones+Alto",
-            "https://www.google.com/maps/search/Comisaría+Salamanca+-+Ate",
-            "https://www.google.com/maps/search/Comisaria+Pnp+Unidad+Vecinal+De+Mirones"
-        ],
-        "ministerios": [
-            "https://www.google.com/maps/search/Ministerio+de+Relaciones+Exteriores+del+Perú+(RREE)",
-            "https://www.google.com/maps/search/Ministerio+de+Educación+del+Perú",
-            "https://www.google.com/maps/search/Ministerio+de+Justicia+y+Derechos+Humanos+del+Perú+(MINJUS)"
-            "https://www.google.com/maps/search/Ministerio+del+Interior+del+Perú+(MININTER)",
-            "https://www.google.com/maps/search/Ministerio+de+la+Mujer+y+Poblaciones+Vulnerables"
-        ],
-        "cines": [
-            "https://www.google.com/maps/search/Cineplanet+Brasil",
-            "https://www.google.com/maps/search/Cineplanet+Salaverry",
-            "https://www.google.com/maps/search/Cinestar+UNI",
-            "https://www.google.com/maps/search/CineStar+Benavides",
-            "https://www.google.com/maps/search/UVK+Platino+Panorama",
-            "https://www.google.com/maps/search/UVK+Multicines+El+Agustino"
+        "aseguradoras2": [
+            "https://maps.app.goo.gl/Jwqs3PbU2E1dEVLf7",
+            "https://maps.app.goo.gl/kRk41ajxaeQVLWd17"
         ]
     }
 

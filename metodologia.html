@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Diagrama CRISP-DM + Léxico</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 2rem;
+    }
+    .diagram-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      position: relative;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .phase {
+      background: white;
+      padding: 1rem;
+      border-radius: 1rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      text-align: center;
+      position: relative;
+    }
+    .phase h3 {
+      margin-top: 0.5rem;
+    }
+    .icon {
+      font-size: 2rem;
+    }
+
+    .lexicon-phase {
+      grid-column: span 3;
+      background: #eaf7ff;
+    }
+  </style>
+</head>
+<body>
+  <h1 style="text-align:center;">Diagrama Metodológico: CRISP-DM + Léxico Especializado</h1>
+  <div class="diagram-container">
+    <div class="phase">
+      <div class="icon"></div>
+      <h3>1. Comprensión del negocio</h3>
+      <p>Identificación de necesidades junto a la aseguradora. </p>
+      <p>Detección de oportunidades para analizar automáticamente quejas, emociones y patrones en las llamadas.. </p>
+      <div class="arrow"></div>
+    </div>
+
+    <div class="phase">
+      <div class="icon"></div>
+      <h3>2. Comprensión de los datos</h3>
+      <p>Exploración de las transcripciones: calidad del texto, palabras clave, localismos limeños y términos técnicos del sector seguros.</p>
+      <div class="arrow"></div>
+    </div>
+
+    <div class="phase">
+      <div class="icon"></div>
+      <h3>3. Preparación de los datos</h3>
+      <p>Limpieza y transformación: corrección ortográfica, lematización, segmentación y stopwords.</p>
+      <div class="arrow-down"></div>
+    </div>
+
+    <div class="phase lexicon-phase">
+      <div class="icon">📚</div>
+      <h3>+ Construcción del léxico especializado en seguros</h3>
+      <p><strong>Fase 1: Extracción léxica</strong>TF, TF-IDF, análisis lingüístico; Valor de polaridad: de -5 a +5<br>
+         <strong>Fase 2: Categorización semántica</strong> Categorización semántica (neutros, afectivos, contextuales); filtrado no léxico<br>
+         <strong>Fase 3: Evaluación semántica</strong> Evaluación modal (actitud, juicio, afecto)</p>
+      <div class="arrow-down"></div>
+    </div>
+
+    <div class="phase">
+      <div class="icon">🧠</div>
+      <h3>4. Modelado</h3>
+      <p>Entrenamiento de modelos: SVM, BERT, Random Forest, usando el lexicon.</p>
+      <div class="arrow"></div>
+    </div>
+
+    <div class="phase">
+      <div class="icon">🧪</div>
+      <h3>5. Evaluación</h3>
+      <p>Métricas por nivel, validación cruzada y evaluación del impacto organizacional.</p>
+      <div class="arrow"></div>
+    </div>
+
+    <div class="phase">
+      <div class="icon">🚀</div>
+      <h3>6. Despliegue</h3>
+      <p>Simulación de integración en sistema de reportes. Visualizaciones de tendencias, emociones y temas críticos.</p>
+      <p><strong>Nivel 1: Detección de quejas</strong>Accuracy, Precision, Recall, F1-Score<br>
+        <strong>Nivel 2: Clasificación temática</strong> Macro F1, Coherencia de tópicos (UMass, C_v)<br>
+        <strong>Nivel 3: Análisis de sentimientos</strong> Macro F1, Matriz de confusión, AUC-ROC, análisis de polaridad</p>
+    </div>
+  </div>
+</body>
+</html>
