@@ -155,11 +155,8 @@ def scrape_reviews(category, urls):
 
 if __name__ == "__main__":
     categories = {
-        "aseguradoras2": [
-            "https://maps.app.goo.gl/SHVtGbcdNVFajzVq8",
-            "https://maps.app.goo.gl/qnLzxsrktf5LBPM66",
-            "https://maps.app.goo.gl/Jwqs3PbU2E1dEVLf7",
-            "https://maps.app.goo.gl/kRk41ajxaeQVLWd17"
+        "pruebafinal": [
+            "https://maps.app.goo.gl/Fx5aguPFFX3iwdus9"
         ]
     }
 
