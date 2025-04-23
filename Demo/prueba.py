@@ -84,6 +84,7 @@ def get_google_maps_reviews(place_url):
 
             soup = BeautifulSoup(driver.page_source, "html.parser")
             reviews_elements = soup.find_all("div", class_="jftiEf")
+
             current_review_count = len(reviews_elements)
 
             print(f"🔍 Reseñas cargadas: {current_review_count}")
@@ -94,6 +95,20 @@ def get_google_maps_reviews(place_url):
             else:
                 last_review_count = current_review_count
                 scroll_attempts = 0
+
+            try:
+                while True:
+                    more_buttons = driver.find_elements(By.CLASS_NAME, "w8nwRe")
+                    if not more_buttons:
+                        break
+                    for button in more_buttons:
+                        try:
+                            button.click()
+                            time.sleep(0.5)
+                        except:
+                            pass
+            except Exception as e:
+                print(f"⚠️ Error al expandir reseñas: {e}")
 
         soup = BeautifulSoup(driver.page_source, "html.parser")
         reviews_elements = soup.find_all("div", class_="jftiEf")
@@ -111,6 +126,7 @@ def get_google_maps_reviews(place_url):
                 review_date = convertir_fecha(review_date_element.text.strip()) if review_date_element else "N/A"
 
                 reviews_data.append({
+                    "name": place_name_text,
                     "review": review_text,
                     "review_date": review_date
                 })
@@ -140,6 +156,8 @@ def scrape_reviews(category, urls):
 if __name__ == "__main__":
     categories = {
         "aseguradoras2": [
+            "https://maps.app.goo.gl/SHVtGbcdNVFajzVq8",
+            "https://maps.app.goo.gl/qnLzxsrktf5LBPM66",
             "https://maps.app.goo.gl/Jwqs3PbU2E1dEVLf7",
             "https://maps.app.goo.gl/kRk41ajxaeQVLWd17"
         ]
