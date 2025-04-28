@@ -76,11 +76,11 @@ def get_google_maps_reviews(place_url):
 
         last_review_count = 0
         scroll_attempts = 0
-        max_attempts = 2
+        max_attempts = 8
 
         while scroll_attempts < max_attempts:
             driver.execute_script("arguments[0].scrollTop = arguments[0].scrollHeight", scrollable_div)
-            time.sleep(2)
+            time.sleep(3)
 
             soup = BeautifulSoup(driver.page_source, "html.parser")
             reviews_elements = soup.find_all("div", class_="jftiEf")
@@ -121,13 +121,16 @@ def get_google_maps_reviews(place_url):
                 review_text_element = review_element.find("span", class_="wiI7pd")
                 review_text = review_text_element.text.strip() if review_text_element else "N/A"
 
-            
+                raw_rating = review_element.find("span", class_="kvMYJc")["aria-label"]
+                rating = float(re.search(r"(\d+)", raw_rating).group(1))  
+
                 review_date_element = review_element.find("span", class_="rsqaWe")
                 review_date = convertir_fecha(review_date_element.text.strip()) if review_date_element else "N/A"
 
                 reviews_data.append({
                     "name": place_name_text,
                     "review": review_text,
+                    "estrellas": rating,
                     "review_date": review_date
                 })
             except Exception as e:
@@ -147,7 +150,7 @@ def scrape_reviews(category, urls):
         all_reviews = pd.concat([all_reviews, reviews_df], ignore_index=True)
 
     if not all_reviews.empty:
-        filename = f"{category}_reviews.xlsx"
+        filename = f"{category}_reviews_positiva.xlsx"
         all_reviews.to_excel(filename, index=False)
         print(f"✅ Reseñas guardadas en {filename}")
     else:
@@ -156,7 +159,10 @@ def scrape_reviews(category, urls):
 if __name__ == "__main__":
     categories = {
         "pruebafinal": [
-            "https://maps.app.goo.gl/Fx5aguPFFX3iwdus9"
+            "https://maps.app.goo.gl/iwAF3rbBzfKoHd5W6",
+            "https://maps.app.goo.gl/nHFH7dJhXYEoHWXSA",
+            "https://maps.app.goo.gl/fSx7CQp2gLbyKjX77",
+            "https://maps.app.goo.gl/AnPiLWq8QJXn5E1DA"
         ]
     }
 
