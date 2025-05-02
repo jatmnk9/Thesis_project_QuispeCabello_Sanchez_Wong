@@ -35,8 +35,8 @@ def limpiar_texto(texto):
     return ' '.join(tokens)
 
 # Cargar datos
-df_reviews = pd.read_excel("reseñas_etiquetadas.xlsx")
-df_lexicon = pd.read_excel("lexicon.xlsx", sheet_name="lexiconv2_lematizado")
+df_reviews = pd.read_excel("reviews_test.xlsx")
+df_lexicon = pd.read_excel("Lexicon.xlsx", sheet_name="lexiconv2_lematizado")
 
 # Preprocesar léxico y reseñas
 df_reviews['review_clean'] = df_reviews['review'].progress_apply(limpiar_texto)
@@ -63,11 +63,11 @@ def analyze_sentiment_phrases(text):
     neg_count = len(tokens_negativos)
 
     if pos_count > neg_count:
-        sentiment = 'satisfecho'
+        sentiment = 'Positivo'
     elif neg_count > pos_count:
-        sentiment = 'insatisfecho'
+        sentiment = 'Negativo'
     else:
-        sentiment = 'neutro'
+        sentiment = 'Neutro'
 
     return pd.Series([pos_count, neg_count, sentiment, matched_phrases, tokens_positivos, tokens_negativos])
 
@@ -75,17 +75,24 @@ def analyze_sentiment_phrases(text):
 df_reviews[['pos_count', 'neg_count', 'sent_pred', 'tokens_encontrados', 'tokens_positivos', 'tokens_negativos']] = \
     df_reviews['review_clean'].progress_apply(analyze_sentiment_phrases)
 
-# Comparar con etiquetas reales
-df_reviews['match'] = df_reviews.apply(lambda x: x['etiqueta'].strip().lower() == x['sent_pred'], axis=1)
+# Asegurarse de que las columnas estén en el formato correcto (sin espacios, en minúsculas)
+df_reviews['etiqueta'] = df_reviews['etiqueta'].str.strip().str.lower()
+df_reviews['sent_pred'] = df_reviews['sent_pred'].str.strip().str.lower()
 
-# Métricas
+# Comparar predicción con la etiqueta real
+df_reviews['match'] = df_reviews['etiqueta'] == df_reviews['sent_pred']
+
+# Calcular precisión general
 accuracy = df_reviews['match'].mean() * 100
+
+# Calcular precisión por tipo de etiqueta
 por_tipo = df_reviews.groupby('etiqueta')['match'].mean() * 100
 
-print(f"Coincidencia general: {accuracy:.2f}%")
-print("Coincidencias por etiqueta:")
+# Mostrar resultados
+print(f"Precisión general: {accuracy:.2f}%")
+print("Precisión por tipo de etiqueta:")
 print(por_tipo)
 
 # Exportar resultados
-df_reviews.to_excel("reseñas_clasificadas_con_tokens.xlsx", index=False)
-print("✅ Análisis completado. Revisa 'reseñas_clasificadas_con_tokens.xlsx'")
+df_reviews.to_excel("REVISAR.xlsx", index=False)
+print("✅ Análisis completado. Revisa 'REVISAR.xlsx'")

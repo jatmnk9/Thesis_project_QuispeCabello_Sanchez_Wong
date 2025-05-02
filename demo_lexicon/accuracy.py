@@ -2,7 +2,7 @@ import pandas as pd
 
 # 1. Cargar datasets
 df_manual = pd.read_excel("reseñas_emociones_etiquetadas.xlsx")
-df_lexicon = pd.read_excel("sentimiento_por_lexicon.xlsx")
+df_lexicon = pd.read_excel("REVISAR.xlsx")
 
 # 2. Normalizar columna 'review' a minúsculas
 df_manual['review'] = df_manual['review'].astype(str).str.lower()
