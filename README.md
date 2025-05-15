@@ -1,2 +1,0 @@
-# Thesis_project_QuispeCabello_Sanchez_Wong
-Thesis
