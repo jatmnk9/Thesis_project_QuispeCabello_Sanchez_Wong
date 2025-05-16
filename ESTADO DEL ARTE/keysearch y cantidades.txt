@@ -1,0 +1,107 @@
+
+( KEY ( sentiment AND analysis ) AND KEY ( lexicon ) ) AND ( LIMIT-TO ( OA , "all" ) ) AND ( LIMIT-TO ( DOCTYPE , "ar" ) OR LIMIT-TO ( DOCTYPE , "re" ) )
+
+247 total
+
+
+( KEY ( sentiment AND analysis ) AND KEY ( social AND media ) ) AND ( LIMIT-TO ( OA , "all" ) ) AND ( LIMIT-TO ( DOCTYPE , "ar" ) OR LIMIT-TO ( DOCTYPE , "re" ) )
+
+1711
+
+
+( KEY ( sentiment AND analysis ) AND KEY ( twitter ) ) AND ( LIMIT-TO ( OA , "all" ) ) AND ( LIMIT-TO ( DOCTYPE , "ar" ) OR LIMIT-TO ( DOCTYPE , "re" ) )
+
+859
+
+
+( KEY ( sentiment AND analysis ) AND KEY ( yelp ) ) AND ( LIMIT-TO ( OA , "all" ) ) AND ( LIMIT-TO ( DOCTYPE , "ar" ) OR LIMIT-TO ( DOCTYPE , "re" ) )
+
+4
+
+( KEY ( sentiment AND analysis ) AND KEY ( facebook ) ) AND ( LIMIT-TO ( OA , "all" ) ) AND ( LIMIT-TO ( DOCTYPE , "ar" ) OR LIMIT-TO ( DOCTYPE , "re" ) )
+
+75
+
+
+( KEY ( user AND comments ) AND KEY ( emotions ) ) AND ( LIMIT-TO ( OA , "all" ) ) AND ( LIMIT-TO ( DOCTYPE , "ar" ) OR LIMIT-TO ( DOCTYPE , "re" ) )
+
+7
+
+
+( KEY ( emotions ) AND KEY ( insurance ) ) AND ( LIMIT-TO ( OA , "all" ) ) AND ( LIMIT-TO ( DOCTYPE , "ar" ) OR LIMIT-TO ( DOCTYPE , "re" ) )
+
+306
+
+( KEY ( emotions ) AND KEY ( insurance AND industry ) ) AND ( LIMIT-TO ( OA , "all" ) ) AND ( LIMIT-TO ( DOCTYPE , "ar" ) OR LIMIT-TO ( DOCTYPE , "re" ) )
+
+5
+
+
+KEY ( insurance AND users ) AND ( LIMIT-TO ( OA , "all" ) ) AND ( LIMIT-TO ( DOCTYPE , "ar" ) OR LIMIT-TO ( DOCTYPE , "re" ) )
+
+314
+
+( KEY ( emotions ) AND KEY ( insurance AND industry ) ) AND ( LIMIT-TO ( OA , "all" ) ) AND ( LIMIT-TO ( DOCTYPE , "ar" ) OR LIMIT-TO ( DOCTYPE , "re" ) )
+
+5
+
+( KEY ( sentiment AND analysis ) AND KEY ( insurance ) ) AND ( LIMIT-TO ( OA , "all" ) ) AND ( LIMIT-TO ( DOCTYPE , "ar" ) OR LIMIT-TO ( DOCTYPE , "re" ) )
+
+16
+
+( TITLE-ABS-KEY ( "emotion*" OR "feeling*" OR "affective response*" OR "sentiment*" ) AND TITLE-ABS-KEY ( "insurance user*" OR "insurance customer*" OR "insurance policyholder*" OR "insurance client*" ) )
+
+6
+
+( KEY ( customer ) AND KEY ( health AND insurance ) ) AND ( LIMIT-TO ( OA , "all" ) ) AND ( LIMIT-TO ( DOCTYPE , "ar" ) OR LIMIT-TO ( DOCTYPE , "re" ) )
+
+22
+
+
+
+( KEY ( customer ) AND KEY ( car AND insurance ) ) AND ( LIMIT-TO ( OA , "all" ) ) AND ( LIMIT-TO ( DOCTYPE , "ar" ) OR LIMIT-TO ( DOCTYPE , "re" ) )
+1
+
+( KEY ( customer ) AND KEY ( life AND insurance ) ) AND ( LIMIT-TO ( OA , "all" ) ) AND ( LIMIT-TO ( DOCTYPE , "ar" ) OR LIMIT-TO ( DOCTYPE , "re" ) )
+
+18
+
+( KEY ( emotions ) AND KEY ( life AND insurance ) ) AND ( LIMIT-TO ( OA , "all" ) ) AND ( LIMIT-TO ( DOCTYPE , "ar" ) OR LIMIT-TO ( DOCTYPE , "re" ) )
+
+114
+
+
+( KEY ( sentiment AND analysis ) AND KEY ( health AND insurance ) ) AND ( LIMIT-TO ( OA , "all" ) ) AND ( LIMIT-TO ( DOCTYPE , "ar" ) OR LIMIT-TO ( DOCTYPE , "re" ) )
+
+11
+
+
+
+health insurance sentiment analysis
+364000
+
+
+analisis de sentimiento seguros de salud
+29100
+
+SENTIMENT ANALYSIS LIFE INSURANCE
+390000
+
+
+
+
+EMOCIONES CLIENTES ASEGURADORAS
+14800
+
+
+seguros de vida satisfaccion cliente
+23000
+
+satisfaccion cliente seguros mapfre peru
+1990
+
+satisfaccion cliente seguros rimac
+3830
+
+satisfaccion cliente seguros pacifico
+16000
